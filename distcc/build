@@ -1,0 +1,25 @@
+et -e
+
+# Make sure no GCC plugin headers leak in
+unset CPPFLAGS
+
+# Fix distcc 3.4 signal handler bug (prototype + definition)
+sed -i \
+  -e 's/^static int dcc_client_signalled/static void dcc_client_signalled/' \
+  -e 's/^int dcc_client_signalled/void dcc_client_signalled/' \
+  src/distcc.c
+
+# Disable broken clang code and define GNU_HOST correctly
+export CFLAGS="$CFLAGS -DNO_CLANG -DGNU_HOST='\"$(gcc -dumpmachine)\"'"
+
+./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --localstatedir=/var \
+    --disable-Werror \
+    --without-libiberty \
+    --disable-clang
+
+make
+make DESTDIR="$1" install
+

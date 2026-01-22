@@ -1,0 +1,8 @@
+gcc
+make
+binutils
+autoconf
+automake
+python make
+pkgconf make
+popt
