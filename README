@@ -1,0 +1,45 @@
+|/
+|\ISS LINUX                                          https://kisslinux.github.io
+________________________________________________________________________________
+
+
+Documentation
+________________________________________________________________________________
+
+- https://kisslinux.github.io/package-system
+- https://kisslinux.github.io/package-manager
+- https://kisscommunity.bvnf.space/kiss/style-guide
+
+Commit Style
+________________________________________________________________________________
+
+Contributions to this repository should adhere to the following commit style.
+
+Commit Style
+________________________________________________________________________________
+
+Contributions to this repository should adhere to the following commit style.
+
++------------------------------------------------------------------------------+
+| Adding a new package                                                         |
++------------------------------------------------------------------------------+
+|                                                                              |
+|   $ git commit -m "pkg_name: new package at pkg_version"                     |
+|                                                                              |
++------------------------------------------------------------------------------+
+| Updating an existing package                                                 |
++------------------------------------------------------------------------------+
+|                                                                              |
+|   $ git commit -m "pkg_name: pkg_version"                                    |
+|   $ git commit -m "pkg_name: bumped to pkg_version"                          |
+|                                                                              |
++------------------------------------------------------------------------------+
+| Miscellaneous changes                                                        |
++------------------------------------------------------------------------------+
+|                                                                              |
+|   $ git commit -m "pkg_name: other changes"                                  |
+|   $ git commit -m "pkg_name: added missing dep_name dependency"              |
+|   $ git commit -m "pkg_name: fixed incorrect bin dir"                        |
+|   $ git commit -m "pkg_name: fixed build failure ..."                        |
+|                                                                              |
++------------------------------------------------------------------------------+
