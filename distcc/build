@@ -1,4 +1,4 @@
-et -e
+#!/bin/sh -e
 
 # Make sure no GCC plugin headers leak in
 unset CPPFLAGS
